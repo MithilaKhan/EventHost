@@ -6,7 +6,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const HostEvent = () => {
     return (
-        <div className='lg:relative'>
+        <div className='lg:relative p-2'>
 <div className='h-[560px] bg-[#7342F9] rounded-4xl lg:mt-16 mt-10  '>
             <div className='grid lg:grid-cols-2 grid-cols-1 content-center justify-items-center lg:py-24 lg:px-16'>
                 <div className='grid-cols-4'>

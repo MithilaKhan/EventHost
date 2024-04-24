@@ -12,71 +12,26 @@ const Events = () => {
     const [fillActive, setFillActive] = useState("tab1");
 
     
-  const handleBasicClick = (value: string) => {
-    if (value === basicActive) {
-      return;
-    }
-    setBasicActive(value);
-  };
-  
+    const handleBasicClick = (value) => { 
+        if (value === fillActive) {
+            return;
+        }
+        setFillActive(value);
+    };
+
     return (
-        <div>
-            <div>
+        <div className=" lg:mt-16 mt-10">
+            <div className="mx-auto">
                 <h1 className="font-semibold text-3xl text-center">Events</h1>
+                <p className="flex gap-5 lg:text-xl justify-center items-center"> <span> All</span>
+                <span>For You</span>
+                <span>This Day</span>
+                <span>This Week</span>
+                <span className="bg-[#7342F9] text-white px-5 py-2 rounded-lg ">Music</span>
+                <span>Union</span></p>
             </div>
             <div>
-            
-    <div className="mb-3">
-      <TETabs fill>
-        <TETabsItem
-          onClick={() => handleFillClick("tab1")}
-          active={fillActive === "tab1"}
-        >
-          All
-        </TETabsItem>
-        <TETabsItem
-          onClick={() => handleFillClick("tab2")}
-          active={fillActive === "tab2"}
-        >
-          For You
-        </TETabsItem>
-        <TETabsItem
-          onClick={() => handleFillClick("tab3")}
-          active={fillActive === "tab3"}
-        >
-          This Day
-        </TETabsItem>
-
-        <TETabsItem
-          onClick={() => handleFillClick("tab4")}
-          active={fillActive === "tab4"}
-        >
-          This Week
-        </TETabsItem>
-        <TETabsItem
-          onClick={() => handleFillClick("tab5")}
-          active={fillActive === "tab5"}
-        >
-          Music
-        </TETabsItem>
-        <TETabsItem
-          onClick={() => handleFillClick("tab6")}
-          active={fillActive === "tab6"}
-        >
-         Union
-        </TETabsItem>
-        
-      </TETabs>
-
-      <TETabsContent>
-        <TETabsPane show={fillActive === "tab1"}> <Card/></TETabsPane>
-        <TETabsPane show={fillActive === "tab2"}> <Card/></TETabsPane>
-        <TETabsPane show={fillActive === "tab3"}> <Card/></TETabsPane>
-        <TETabsPane show={fillActive === "tab4"}> <Card/></TETabsPane>
-        <TETabsPane show={fillActive === "tab5"}> <Card/></TETabsPane>
-        <TETabsPane show={fillActive === "tab6"}> <Card/></TETabsPane>
-      </TETabsContent>
-    </div>  
+             <Card/>
             </div>
            
         </div>
